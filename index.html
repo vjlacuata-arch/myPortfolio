@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/577d474fd7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="home">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="container2">
+                <div class="text">
+                    <h1>Hi, I'm <span>Victor</span></h1>
+                    <p>Welcome to my Portfolio</p>
+                </div>
+                <div class="image">
+                    <img src="src/B9E297EF-33EF-4537-923E-B62F07D7F2F4-pxbee-bg-remover-20260315223516.png"
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="column1">
+                    <img class="img2" src="src/BF1CC03E-EC67-43DC-A3D0-67BDC4DEB6B2-pxbee-bg-remover-20260315223448.png">
+                </div>
+                <div class="column2">
+                    <h1 class="aboutme">About Me</h1>
+                    <p>Hi, my name is Victor John C. Lacuata. I’m passionate about technology and web development. 
+                      I enjoy learning new programming languages, building creative projects, 
+                     and exploring how design and functionality can work together to make 
+                     user-friendly websites. Outside of coding, I love discovering new ideas, 
+                     sharing knowledge, and continuously improving my skills.</p>
+
+                     <div class="title">
+                        <p class="tablinks activelinks" onclick="opentab('skills')">Skills</p>
+                        <p class="tablinks" onclick="opentab('education')">Education</p>
+                     </div>
+                     <div class="tabcontents activetab" id="skills">
+                        <ul>
+                            <li><span>HTML & CSS</span><br></li>
+                            <li><span>JavaScrip Basics</span><br></li>
+                            <li><span>Problem Solving</span></li>
+                        </ul>
+                     </div>
+
+                     <div class="tabcontents" id="education">
+                        <ul>
+                            <li><span>2023</span><br> Introduction to java programming</li>
+                            <li><span>2023</span><br> Introduction to C# programming</li>
+                            <li><span>2026</span><br> Web Programming Essentials using HTML, JavaScript, and CSS</li>
+                            <li><span>2026</span><br> Mobile Programming Essentials in Android Studio</li>
+                        </ul>
+                     </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills">
+        <div class="container">
+            <h1 class="skills">My Skills</h1>
+            <div class="skillslist">
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI & UX Design</h2>
+                    <p>I can make you a cool design and latest designs </p>
+                    <a href="https://www.facebook.com/victorjohn.lacuata.1">Contact </a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Designing</h2>
+                    <p>I can build a clean and user-friendly Web</p>
+                    <a href="https://www.facebook.com/victorjohn.lacuata.1">Contact </a>
+                    
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Designing</h2>
+                    <p>I can build a cool app for you</p>
+                    <a href="https://www.facebook.com/victorjohn.lacuata.1">Contact </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>vjlacuata@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>01234567899</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/victorjohn.lacuata.1"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.threads.com/@lighttskin_vicss?xmt=AQF0OvScEYJFkMDwu9maFNXpAL0Gpa3NXWfsDvK28id3f0k"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://mail.google.com/mail/u/1/#inbox"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="www.linkedin.com/in/victor-lacuata-3b0845386"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @Vics Maybitaw</p>
+        </div>
+    </div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tablinks");
+    var tabcontents = document.getElementsByClassName("tabcontents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("activelinks");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("activetab");
+        }
+        event.currentTarget.classList.add("activelinks");
+        document.getElementById(tabname).classList.add("activetab");
+    }
+</script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+    
+</body>
+</html>
